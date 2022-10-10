@@ -45,4 +45,11 @@ class KotlkotlinApplicationTests {
         val name: String = "kimeunbin"
         println("My name is $name")
     }
+
+    @Test
+    fun inheritance() {
+
+        val name: String = "kimeunbin"
+        println("My name is $name")
+    }
 }

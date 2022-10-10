@@ -7,13 +7,12 @@ import com.study.kotlkotlin.global.error.exception.ErrorProperty
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
-import javax.servlet.http.HttpServletResponse
 
+import javax.servlet.http.HttpServletResponse
 
 class GlobalExceptionFilter(
     private val objectMapper: ObjectMapper
 ) : OncePerRequestFilter() {
-
 
     override fun doFilterInternal(
         request: HttpServletRequest,

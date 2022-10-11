@@ -42,11 +42,8 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.10.7")
 
     runtimeOnly("mysql:mysql-connector-java")
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
 
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
+    testImplementation("org.mockito:mockito-inline:4.2.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

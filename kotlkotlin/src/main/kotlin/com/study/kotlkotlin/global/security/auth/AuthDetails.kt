@@ -11,7 +11,7 @@ class AuthDetails(
 ): UserDetails {
 
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-        return Collections.singleton(SimpleGrantedAuthority(user.authority.toString()));
+        return Collections.singleton(SimpleGrantedAuthority(user.authority.name));
     }
 
     override fun getPassword(): String? {

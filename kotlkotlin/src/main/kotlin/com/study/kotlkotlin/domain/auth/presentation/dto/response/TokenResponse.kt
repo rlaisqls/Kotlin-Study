@@ -1,9 +1,9 @@
 package com.study.kotlkotlin.domain.auth.presentation.dto.response
 
-import java.util.*
+import java.time.LocalDateTime
 
 data class TokenResponse(
     val accessToken: String,
-    val accessTokenExp: Date,
+    val accessTokenExp: LocalDateTime,
     val refreshToken: String
 )

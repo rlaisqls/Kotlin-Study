@@ -7,7 +7,8 @@ enum class CouponErrorCode (
     private val message: String
 ): ErrorProperty {
 
-    COUPON_NOT_FOUND(404, "Coupon Not Found");
+    COUPON_NOT_FOUND(404, "Coupon Not Found"),
+    EXPIRED_COUPON(409, "Expired Coupon");
 
     override fun message(): String = message
     override fun status(): Int = status

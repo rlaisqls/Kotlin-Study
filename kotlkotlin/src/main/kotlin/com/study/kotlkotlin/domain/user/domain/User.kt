@@ -34,6 +34,10 @@ class User(
 
     @JsonIgnore
     @OneToMany(mappedBy = "user")
-    private val orders: MutableList<Order> = ArrayList<Order>()
+    private val orders: MutableList<Order> = ArrayList()
+
+    fun changePassword(encode: String?) {
+        this.password = password
+    }
 
 }

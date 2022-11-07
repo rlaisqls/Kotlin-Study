@@ -4,13 +4,11 @@ import com.study.kotlkotlin.domain.auth.presentation.dto.response.TokenResponse
 import com.study.kotlkotlin.domain.user.facade.UserFacade
 import com.study.kotlkotlin.domain.user.presentation.dto.request.SignInRequest
 import com.study.kotlkotlin.global.security.jwt.JwtTokenProvider
-import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import javax.transaction.Transactional
 
 @Service
 class SignInService(
-    private val passwordEncoder: PasswordEncoder,
     private val userFacade: UserFacade,
     private val jwtTokenProvider: JwtTokenProvider
 ) {

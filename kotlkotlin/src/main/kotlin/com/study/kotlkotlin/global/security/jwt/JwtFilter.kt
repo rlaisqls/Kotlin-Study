@@ -1,7 +1,5 @@
 package com.study.kotlkotlin.global.security.jwt
 
-import lombok.RequiredArgsConstructor
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.OncePerRequestFilter
 import java.io.IOException

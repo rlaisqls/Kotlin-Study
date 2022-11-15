@@ -1,6 +1,6 @@
 # @JvmStatic
 
-`@JvmStatic`은 static 변수의 get/set 함수를 자동으로 만들라는 의미이다.
+함수와 프로퍼티에 static 하게 접근할 수 있도록 추가적인 메서드 또는 getter / setter 를 생성한다.
 
 다음 Bar 클래스는 barSize라는 변수를 companion object에 선언함으로써, 전역변수를 만들었다.
 
@@ -79,5 +79,7 @@ Bar.setBarSize(10);
 Bar.Companion.getBarSize();
 Bar.Companion.setBarSize(10);
 ```
+
+@JvmStatic를 사용하면 클래스도 마찬가지로 `Companion` 키워드 없이 접근할 수 있다.
 
 정리하자면, @JvmStatic는 Companion에 등록된 변수를 자바의 static처럼 선언하기 위한 annotation이다.

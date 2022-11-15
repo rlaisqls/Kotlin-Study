@@ -2,7 +2,7 @@
 
 `@JvmField`는 get/set을 생성하지 말라는 의미이다.
 
-다음 코틀린 코드에서 프로퍼티 var barSize는 get/set함수를 생성한다.
+다음 코틀린 코드에서 프로퍼티 var barSize는 getter/setter를 생성한다.
 
 ```kotlin
 class Bar {
@@ -32,7 +32,7 @@ class Bar {
 }
 ```
 
-자바로 변환해보면 get/set 함수가 생성되지 않은 것을 볼 수 있다.
+자바로 변환해보면 getter/setter가 생성되지 않은 것을 볼 수 있다.
 
 ```java
 public final class Bar {

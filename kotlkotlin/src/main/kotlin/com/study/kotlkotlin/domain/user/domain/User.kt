@@ -1,6 +1,5 @@
 package com.study.kotlkotlin.domain.user.domain
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import com.study.kotlkotlin.domain.order.domain.Order
 import com.study.kotlkotlin.domain.user.domain.enums.Authority
 import javax.persistence.*
@@ -32,7 +31,6 @@ class User(
     var authority: Authority = authority
         protected set
 
-    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private val orders: MutableList<Order> = ArrayList()
 

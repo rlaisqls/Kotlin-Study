@@ -8,11 +8,12 @@ spring:
     password: ${LOCAL_DB_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: validate
-    show-sql: false
+      ddl-auto: create
+    show-sql: true
     properties:
-      format_sql: true
       generate-ddl: true
+      hibernate:
+        format_sql: true
   redis:
     host: ${REDIS_HOST}
     port: ${REDIS_PORT}
@@ -21,5 +22,5 @@ jwt:
   header: ${JWT_HEADER}
   prefix : ${JWT_PREFIX}
   secret-key: ${JWT_SECRET}
-  access-exp: ${TOKEN_EXP}
+  access-exp: ${ACCESS_EXP}
   refresh-exp: ${REFRESH_EXP}

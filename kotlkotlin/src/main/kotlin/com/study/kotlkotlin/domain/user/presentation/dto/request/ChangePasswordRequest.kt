@@ -1,14 +1,15 @@
 package com.study.kotlkotlin.domain.user.presentation.dto.request
 
+import com.study.kotlkotlin.global.util.RegexpUtil
+import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Pattern
 
 data class ChangePasswordRequest(
 
+    @field:NotBlank
     val oldPassword: String,
 
-    @field:Pattern(
-        regexp = "(?=.*[a-z])(?=.*[0-9])(?=.*[!#$%&'()*+,./:;<=>?@＼^_`{|}~])[a-zA-Z0-9!#$%&'()*+,./:;<=>?@＼^_`{|}~]{8,30}$",
-        message = "password는 숫자, 특수문자가 포함되어야 합니다."
-    )
+    @field:NotBlank
+    @field:Pattern(regexp = RegexpUtil.PASSWORD_PATTERN)
     val newPassword: String
 )

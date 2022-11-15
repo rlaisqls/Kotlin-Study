@@ -24,12 +24,6 @@ class SecurityConfig(
     fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
 
     @Bean
-    fun webSecurityCustomizer(web: WebSecurity): WebSecurityCustomizer {
-        return web.ignoring().antMatchers("/ignore1", "/ignore2") as WebSecurityCustomizer
-    }
-
-
-    @Bean
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
 
         http.cors().and()
